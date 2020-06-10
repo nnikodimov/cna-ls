@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: grafana-storage
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: wcp-storage-policy
+  resources:
+    requests:
+        storage: 1Gi

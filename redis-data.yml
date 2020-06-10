@@ -1,0 +1,14 @@
+kind: PersistentVolumeClaim 
+apiVersion: v1 
+metadata:
+  name: redis-data
+  labels:
+    app: redis-server
+  annotations:
+    volume.beta.kubernetes.io/storage-class: wcp-storage-policy
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi

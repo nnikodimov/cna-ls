@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jumpbox
+  namespace: livefire
+spec:
+  containers:
+  - image: "photon:3.0"
+    name: jumpbox
+    command: [ "/bin/bash", "-c", "--" ]
+    args: [ "yum install -y openssh-server; mkdir /root/.ssh; cp /root/ssh/ssh-privatekey /root/.ssh/id_rsa; chmod 600 /root/.ssh/id_rsa; while true; do sleep 30; done;" ]
+    volumeMounts:
+      - mountPath: "/root/ssh"
+        name: ssh-key
+        readOnly: true
+  volumes:
+    - name: ssh-key
+      secret:
+        secretName: cluster-dev-ssh
