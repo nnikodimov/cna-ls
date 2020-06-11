@@ -19,6 +19,6 @@ spec:
       cni:
         name: calico
       services:
-        cidrBlocks: ["10.151.4.0/22"]
+        cidrBlocks: ["10.151.0.0/22"]
       pods:
-        cidrBlocks: ["10.51.16.0/20"]
+        cidrBlocks: ["10.51.0.0/20"]
