@@ -1,10 +1,9 @@
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
-  name: default
+  name: tkg-storage-nfs
   annotations:
     storageclass.kubernetes.io/is-default-class: "true"
 provisioner: csi.vsphere.vmware.com
 parameters:
-  storagepolicyname: "tkg-livefire-storage"
-  fstype: ext4
+  datastoreurl: "ds:///vmfs/volumes/ddeaf657-14757c5f/"
