@@ -34,7 +34,7 @@ spec:
       volumes:
       - name: storage
         persistentVolumeClaim:
-          claimName: minio-pv
+          claimName: minio-data
       - name: config
         emptyDir: {}
       containers:

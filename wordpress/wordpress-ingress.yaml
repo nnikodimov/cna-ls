@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: wordpress
+  name: wordpress-svc
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app.kubernetes.io/name: wordpress
+  sessionAffinity: None
+  type: ClusterIP
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: selfsigned-issuer
+    kubernetes.io/ingress.allow-http: "false"
+  name: wordpress-ingress-tls
+spec:
+  tls:
+  - hosts:
+    - livefire.corp.local
+    secretName: wordpress-tls
+  rules:
+  - host: livefire.corp.local
+    http:
+      paths:
+      - backend:
+          serviceName: wordpress-svc
+          servicePort: 80
+

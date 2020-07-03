@@ -61,7 +61,7 @@ data:
         Match          *
         Host           splunk-s1-standalone-headless
         Port	       8088
-        Splunk_Token   62706D00-A209-2101-5AA4-F1EB8130194E
+        Splunk_Token   ABB7DC73-5EEE-6BD0-E65E-26F0A7BBD80A
         TLS            On
         TLS.Verify     Off
 

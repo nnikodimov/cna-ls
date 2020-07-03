@@ -1,8 +1,0 @@
-
-apiVersion: enterprise.splunk.com/v1alpha2
-kind: Standalone
-metadata:
-  name: s1
-  namespace: tanzu-system-logging
-  finalizers:
-  - enterprise.splunk.com/delete-pvc
