@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: gangwaysvc
+  namespace: tanzu-system-auth
+  labels:
+    app: gangway
+spec:
+  type: NodePort
+  ports:
+    - name: "https"
+      protocol: TCP
+      port: 443
+      targetPort: "https"
+      nodePort: 30166
+  selector:
+    app: gangway

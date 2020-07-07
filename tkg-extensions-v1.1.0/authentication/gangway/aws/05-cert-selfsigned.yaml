@@ -1,0 +1,38 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Issuer
+metadata:
+  name: gangway-ca-issuer
+  namespace: tanzu-system-auth
+spec:
+  selfSigned: {}
+---
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: gangway-cert
+  namespace: tanzu-system-auth
+spec:
+  # Secret names are always required.
+  secretName: gangway-cert-tls
+  duration: 2160h # 90d
+  renewBefore: 360h # 15d
+  organization:
+    - vmware
+  commonName: tkg-gangway
+  isCA: false
+  keySize: 2048
+  keyAlgorithm: rsa
+  keyEncoding: pkcs1
+  # At least one of a DNS Name, USI SAN, or IP address is required.
+  dnsNames:
+    - tkg-gangway
+    - <GANGWAY_SVC_LB_HOSTNAME>
+  # Issuer references are always required.
+  issuerRef:
+    name: gangway-ca-issuer
+    # We can reference ClusterIssuers by changing the kind here.
+    # The default value is Issuer (i.e. a locally namespaced Issuer)
+    kind: Issuer
+    # This is optional since cert-manager will default to this value however
+    # if you are using an external issuer, change this to that issuer group.
+    group: cert-manager.io

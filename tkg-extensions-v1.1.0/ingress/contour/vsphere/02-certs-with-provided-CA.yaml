@@ -1,0 +1,87 @@
+#apiVersion: v1
+#kind: Secret
+#metadata:
+#  name: contour-ca-key-pair
+#  namespace: tanzu-system-ingress
+#data:
+#  tls.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURNVENDQWhtZ0F3SUJBZ0lKQVBGYVpiUDBES3V1TUEwR0NTcUdTSWIzRFFFQkN3VUFNQzh4R0RBV0JnTlYKQkFvTUQxQnliMnBsWTNRZ1EyOXVkRzkxY2pFVE1CRUdBMVVFQXd3S1EyOXVkRzkxY2lCRFFUQWVGdzB5TURBeQpNVFF3TVRFNU16QmFGdzB5TlRBeU1USXdNVEU1TXpCYU1DOHhHREFXQmdOVkJBb01EMUJ5YjJwbFkzUWdRMjl1CmRHOTFjakVUTUJFR0ExVUVBd3dLUTI5dWRHOTFjaUJEUVRDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVAKQURDQ0FRb0NnZ0VCQUtrQUd6YmZ4NmtDRTNvU0N5T1ZEY0xLN2tqZkJOdG51ems4RnBlMlE0K2ZUckEyWnppbQpKOTBJZDhPeXI0UTd1dFhWa21rQThGdlB6OU9wREFSZ3N6T3h4SkRtRXRaTWpXYjRVcS9HeHZqY0FxeDZCSW0rCk9aODIxS0J3LzV5U0pYYUpWL1htb0V1RkZnT2NjNlU1cDdocnRMNVJaNGgvZStKakNSTDV2VGRibVdPUnhuMnMKM2NWSnFSazIzd0daem4wRDlmbHlBejBmKzJjN0dFZTVvYVZPVlBMelE3bEJlTUZmL1EvSC9qUk5vVDRzOEthdwp5dG1lYld4cHNKY01YVkdyaVhkeTJwQ0l3VWJkQVpEQjIrUTlzYjMvdU1VS2NFN1B1OE53c3ZDUXBvc2E3d253CkVxSUlWeEFFcVpNL2tqMEppV1pGcWNtbnhKNEhWWHFOZ1hVQ0F3RUFBYU5RTUU0d0hRWURWUjBPQkJZRUZDNWYKTW11TGNtVi92YXo2M0RyalQ2dlNkM0xRTUI4R0ExVWRJd1FZTUJhQUZDNWZNbXVMY21WL3ZhejYzRHJqVDZ2UwpkM0xRTUF3R0ExVWRFd1FGTUFNQkFmOHdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSElQRXl4aGc3RmNQTG00ClJqTjl6WTNVeFdkcmhZeE1HMXZLNEFYQnMyMXBjNk8wSjJqNmRGZXNwYWkrMEc0NndJTXBXWHd2TzNyaU1pRVEKa3NRNXlWeW10S2tMU0FWbldseXgwUkpqUWZ4cWhXYWliTmlMRmlvMmFhaWlEaUI3WjYzVEVMak5tNWphb3MxUQpSc1N4UFRabll4MkFtMVBvNFZMb3dJNDVMeitIeWtVY1hlZWlJcEJEWm1ncHZsR3FBaWlDMjBuWnFYZGRGeGhKCmxsYlRCaHJPMVRvWmlDd1ZVWHdwZnowd3Rqc0s4M3B4aE9QVDFZb2JCZVJCdHYzOE1Fc29WZkVmYjJpTGoxWTgKRVdyU1pyTmVIQVAzbUIwMktLZisxdUVOaVZDVXVhSWRvc2dsS3kxa1doTGNjZ0ZlOVVZSlRwaHFZWDVveG1UbgpkdmJwanI4PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+#  tls.key: LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2Z0lCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktnd2dnU2tBZ0VBQW9JQkFRQ3BBQnMyMzhlcEFoTjYKRWdzamxRM0N5dTVJM3dUYlo3czVQQmFYdGtPUG4wNndObWM0cGlmZENIZkRzcStFTzdyVjFaSnBBUEJiejgvVApxUXdFWUxNenNjU1E1aExXVEkxbStGS3Z4c2I0M0FLc2VnU0p2am1mTnRTZ2NQK2NraVYyaVZmMTVxQkxoUllECm5IT2xPYWU0YTdTK1VXZUlmM3ZpWXdrUytiMDNXNWxqa2NaOXJOM0ZTYWtaTnQ4Qm1jNTlBL1g1Y2dNOUgvdG4KT3hoSHVhR2xUbFR5ODBPNVFYakJYLzBQeC80MFRhRStMUENtc01yWm5tMXNhYkNYREYxUnE0bDNjdHFRaU1GRwozUUdRd2R2a1BiRzkvN2pGQ25CT3o3dkRjTEx3a0thTEd1OEo4QktpQ0ZjUUJLbVRQNUk5Q1lsbVJhbkpwOFNlCkIxVjZqWUYxQWdNQkFBRUNnZ0VBTC90ZXZxcTBkbENubFAzd2VhN0ZGR3duVVRzNGxzNlJ3b05ENnRrTnY0WTgKZ2gxQUd6NVpqUkR0Wi91Z2g0dXAxVEpvK2pVUkNSQXNjbXpKZzZpczJGMTljS0pSOE5RVlJZbjFlQUNZMTJrbgp2UzU3Z1Z3bjRnTmdSUmt3Q1pVWTI5bk14bjB2UDZIT2lVSHZONWJ4L3BOZDRyY2NEUTRjN3o2dEFkMDBFcllSCmtua3oxUjRzM0lqRHZPLzg0emozcklpSENETXZ2NGI5ZGVMUy90YWpSNEluNGxMT2c2YzR3UzVyUnBTcWR3N3UKM3V2Q2EzMUFvSXQvWENaZGk1STlYV3NKQ0VmM0dlR29nQzE3b3VEN2VQOFlIdVdWRmJDM2xQb09JOVRvL0UxKwpzbENKODlmeHUrRVBoL0FtTms5UVIxWVBBR25GcHkxSWc5eHhHb05uOVFLQmdRRGc5UmRTUTF6MUZXS2pTZmVyCkk4azdZVDJRcHhsakR1bmxhSXlKMm5yN1Y3dURPNEpKQnZJRWJzRFNMcjZObGdBd2tDRWxHandpU0V3MHZYYUcKSytPN1ZydjI4QlYrUElYNkQzVlBWMFJBZ1JBNjZBZ21Rc3FDUU9CTVVNdGxVNXJRdGtFcEYraUM3aXcreVp2SApkSHhrUW9EaUpZNG5FVDhoN1p5Z2ZLQzRwd0tCZ1FEQVVrTmpwUWp1S3JwRGFNNS9VRnF4L1NqNnp4YmdMSlBnClRFMVVEaGo5Mjh6cU9pbXZxcGg2UmtjMzZIc2NMSWVxaFloM3dlVzFZUi9QL09UcWxNUkVYNnNYWDh2RDlSK1kKczdZUTJWTmRRV0VuQXE5K05pdFVmU2wrWFFSY2pUcGRmWlFxbjRYTW1WMDVaNnIyVDV4Y0JNUHJWZ0VGSmozbwpGWFZHR2RWY2d3S0JnUURYc2ttTlNDZittMlc3dWZXdTlCNUVRR1hlcUVwUVVBRjNSVHJVQjFnNlhaSGZNQlVwClhtNTZUNU8xTkxyaldYdVBGUE9pOXJmSUMxaCtqVmZ6S0d3d3VlWjZ6Uk5ldWp1Z1hHZ1lEazNVSjZ4ZlB4SnAKVlV1RmZ4MVNMM29IQ3hYN24zVjFLSVo1M0ZNeVZPOTRYTG5WREdzMTY5cVVuUlhTdTFtZURFR3pLd0tCZ0JMcApBODlNYnZCY0t5eHRwY0JHK21QOTdJV2N6emNEcXhhbTZnT1Z6MGRHMFlOR2JNcmxEMUVXai9JalhkZUxXVnVlCi9hZ28zSmxWRDNlMytocEd2bldxb253TjQwOUZUdklJMmFJV2ZHZnpBY2FBTVJsTDRqN1FmNy81RFhDOFFqem4KR0NhSXdQTTVNVDF2d0JPd0NFUFVCQitqdVQzMFlLbnRVamF1VzVoWkFvR0JBS28xNi9abGk5K015L1gxRktTYwp4LzYyUVVOb2ZDZkdCeWJydzdGYzIvc05SWGdBT2MxZi9uNUx0V2tqQTllQ05iMTdHYjdlOEFLVXU2QUYxZ08yCmNxU2txa3FqeC9xNkdEK2FNbHkyd2xkQmNEVzlzSU5PdW52My92WGJWSWdHWG1hbmIvMjVZU1ErbGRZZ0Z5MGcKbWFqNEZtM0dvTUQ0VG1YTWNER1BiNWJaCi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K
+#---
+#apiVersion: cert-manager.io/v1alpha2
+#kind: Issuer
+#metadata:
+#  name: contour-ca-issuer
+#  namespace: tanzu-system-ingress
+#spec:
+#  ca:
+#    secretName: contour-ca-key-pair
+#---
+#apiVersion: cert-manager.io/v1alpha2
+#kind: Certificate
+#metadata:
+#  name: contour-cert
+#  namespace: tanzu-system-ingress
+#spec:
+#  # Secret names are always required.
+#  secretName: contourcert
+#  duration: 2160h # 90d
+#  renewBefore: 360h # 15d
+#  organization:
+#  - "Project Contour"
+#  commonName: contour
+#  isCA: false
+#  keySize: 2048
+#  keyAlgorithm: rsa
+#  keyEncoding: pkcs1
+#  usages:
+#    - server auth
+#  # At least one of a DNS Name, USI SAN, or IP address is required.
+#  dnsNames:
+#  - contour
+#  - contour.tanzu-system-ingress
+#  - contour.tanzu-system-ingress.svc
+#  - contour.tanzu-system-ingress.svc.cluster.local
+#  # Issuer references are always required.
+#  issuerRef:
+#    name: contour-ca-issuer
+#    # We can reference ClusterIssuers by changing the kind here.
+#    # The default value is Issuer (i.e. a locally namespaced Issuer)
+#    kind: Issuer
+#    # This is optional since cert-manager will default to this value however
+#    # if you are using an external issuer, change this to that issuer group.
+#    group: cert-manager.io
+#---
+#apiVersion: cert-manager.io/v1alpha2
+#kind: Certificate
+#metadata:
+#  name: envoy-cert
+#  namespace: tanzu-system-ingress
+#spec:
+#  # Secret names are always required.
+#  secretName: envoycert
+#  duration: 2160h # 90d
+#  renewBefore: 360h # 15d
+#  organization:
+#  - "Project Contour"
+#  commonName: envoy
+#  isCA: false
+#  keySize: 2048
+#  keyAlgorithm: rsa
+#  keyEncoding: pkcs1
+#  usages:
+#    - client auth
+#  # At least one of a DNS Name, USI SAN, or IP address is required.
+#  dnsNames:
+#  - envoy
+#  - envoy.tanzu-system-ingress
+#  - envoy.tanzu-system-ingress.svc
+#  - envoy.tanzu-system-ingress.svc.cluster.local
+#  # Issuer references are always required.
+#  issuerRef:
+#    name: contour-ca-issuer
+#    # We can reference ClusterIssuers by changing the kind here.
+#    # The default value is Issuer (i.e. a locally namespaced Issuer)
+#    kind: Issuer
+#    # This is optional since cert-manager will default to this value however
+#    # if you are using an external issuer, change this to that issuer group.
+#    group: cert-manager.io
