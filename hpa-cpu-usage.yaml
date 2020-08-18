@@ -1,0 +1,18 @@
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: frontend-hpa
+  annotations:
+    wavefront.com.custom.metric/pods.cpu.usage_rate: 'align(5m, avg(ts(kubernetes.pod.cpu.usage_rate, label.app="frontend")))'
+spec:
+  minReplicas: 1
+  maxReplicas: 3
+  metrics:
+  - type: Pods
+    pods:
+      metricName: cpu.usage_rate
+      targetAverageValue: 25000m
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: frontend
