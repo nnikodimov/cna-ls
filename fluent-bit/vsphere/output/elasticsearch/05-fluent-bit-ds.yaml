@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: fluent-bit
-        image: vmware-docker-tkg.bintray.io/fluent-bit:v1.3.8_vmware.1
+        image: fluent/fluent-bit:1.5.2
         imagePullPolicy: IfNotPresent
         ports:
           - containerPort: 2020
