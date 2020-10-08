@@ -1396,7 +1396,7 @@ stringData:
               valueFrom:
                 fieldRef:
                   fieldPath: spec.nodeName
-            image: antrea/antrea-ubuntu:latest
+            image: antrea/antrea-ubuntu:v0.9.3
             imagePullPolicy: IfNotPresent
             name: antrea-controller
             ports:
@@ -1522,7 +1522,7 @@ stringData:
               valueFrom:
                 fieldRef:
                   fieldPath: spec.nodeName
-            image: antrea/antrea-ubuntu:latest
+            image: antrea/antrea-ubuntu:v0.9.3
             imagePullPolicy: IfNotPresent
             livenessProbe:
               exec:
@@ -1580,7 +1580,7 @@ stringData:
               name: xtables-lock
           - command:
             - start_ovs
-            image: antrea/antrea-ubuntu:latest
+            image: antrea/antrea-ubuntu:v0.9.3
             imagePullPolicy: IfNotPresent
             livenessProbe:
               exec:
@@ -1614,7 +1614,7 @@ stringData:
           initContainers:
           - command:
             - install_cni
-            image: antrea/antrea-ubuntu:latest
+            image: antrea/antrea-ubuntu:v0.9.3
             imagePullPolicy: IfNotPresent
             name: install-cni
             resources:
